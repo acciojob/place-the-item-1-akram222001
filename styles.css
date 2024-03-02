@@ -1,2 +1,33 @@
 
 /* Your CSS Code here. */
+.holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+	
+}
+
+.item {
+	height:200px;
+	width:200px;
+  flex: 0 0 auto;
+  width: calc(25% - 10px); 
+  margin-bottom: 20px;
+  background-color:red; /* Example background color */
+  border: 1px solid #ccc; /* Example border */
+  box-sizing: border-box;
+}
+
+/* For small screens, adjust width of items to fit them all in one row */
+@media screen and (max-width: 768px) {
+  .item {
+    width: calc(50% - 10px);
+  }
+}
+
+/* For even smaller screens, adjust width of items to stack them vertically */
+@media screen and (max-width: 480px) {
+  .item {
+    width: 100%;
+  }
+}
